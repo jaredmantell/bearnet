@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Calculator</title>
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 15px sans-serif;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .container {
+        display: flex;
+        gap: 120px;
+      }
+
+      .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input {
+        width: 40px;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      button {
+        height: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Javascript Calculator</h1>
+      <div class="container">
+        <!-- 1st number input -->
+        <div class="widget">
+          <p>1st #</p>
+          <input type="number" id="firstNumber" /><br />
+        </div>
+        <!-- Operator radio input -->
+        <div class="widget">
+          <p>Operator</p>
+          <div>
+            <input type="radio" id="add" name="operation"/>
+            +
+            <input type="radio" id="subtract" name="operation"/>
+            —
+            <input type="radio" id="multiply" name="operation"/>
+            x
+            <input type="radio" id="divide" name="operation"/>
+            ÷
+          </div>
+        </div>
+        <!-- 2nd number input -->
+        <div class="widget">
+          <p>2nd #</p>
+          <input type="number" id="secondNumber" /><br />
+        </div>
+        <!-- Answer display -->
+        <div class="widget">
+          <p>Result</p>
+          <p id="result"></p>
+        </div>
+      </div>
+
+      <script>
+        // Gets number values and performs calculation based on checked operation
+        const handleCalculate = () => {
+          let first = Number(document.getElementById("firstNumber").value);
+          let second = Number(document.getElementById("secondNumber").value);
+
+          if (document.getElementById("add").checked) {
+            document.getElementById("result").innerHTML = first + second;
+          } else if (document.getElementById("subtract").checked) {
+            document.getElementById("result").innerHTML = first - second;
+          } else if (document.getElementById("multiply").checked) {
+            document.getElementById("result").innerHTML = first * second;
+          } else if (document.getElementById("divide").checked) {
+            document.getElementById("result").innerHTML = first / second;
+          } else {
+            document.getElementById("result").innerHTML = "";
+          }
+        };
+
+        // Call handleCalculate() if 1st # or 2nd # are changed
+        document
+          .getElementById("firstNumber")
+          .addEventListener("keyup", handleCalculate);
+        document
+          .getElementById("secondNumber")
+          .addEventListener("keyup", handleCalculate);
+        document
+          .getElementById("firstNumber")
+          .addEventListener("change", handleCalculate);
+        document
+          .getElementById("secondNumber")
+          .addEventListener("change", handleCalculate);
+
+        // Call handleCalculate() if operation value changes
+        document
+          .getElementById("add")
+          .addEventListener("change", handleCalculate);
+        document
+          .getElementById("subtract")
+          .addEventListener("change", handleCalculate);
+        document
+          .getElementById("multiply")
+          .addEventListener("change", handleCalculate);
+        document
+          .getElementById("divide")
+          .addEventListener("change", handleCalculate);
+      </script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="weather.css" />
+  </head>
+
+  <body>
+    <!--Weather Widget-->
+    <div class="weather" id="weatherWidget">
+      <div class="weather-loc"></div>
+      <div class="weather-humidity"></div>
+      <div class="weather-temp"></div>
+      <img class="weather-tomorrow" />
+      <img class="weather-dayaftertomorrow" />
+    </div>
+    <button id="refreshButton">Refresh</button>
+  </body>
+
+  <script type="text/javascript">
+    // Gets weather data and calls ajaxCallback()
+    function fetchWeather() {
+      // XMLHTtpRequest
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open(
+        "GET",
+        "https://classes.engineering.wustl.edu/cse330/content/weather_json.php",
+        true
+      );
+      xmlHttp.addEventListener("load", ajaxCallback, false);
+      xmlHttp.send();
+    }
+
+    // Formats data and sets them as content of HTML elements
+    function ajaxCallback() {
+      // Get response formatted as JSON
+      var jsonData = JSON.parse(event.target.responseText);
+
+      // Destructure data into relevant variables
+      let { location, atmosphere, current, dayafter, tomorrow } = jsonData;
+
+      // Format location & image URLs
+      const formattedLocation = "<p><strong>" + location.city + "</strong> " + location.state + "</p>";
+      const tmrwImageURL = `http://us.yimg.com/i/us/nws/weather/gr/${tomorrow.code}ds.png`;
+      const dayAfterTmrwImageURL = `http://us.yimg.com/i/us/nws/weather/gr/${dayafter.code}ds.png`;
+
+      // Get weatherWidget element and set content of each of its children
+      const weatherWidget = document.getElementById("weatherWidget").children;
+      weatherWidget[0].innerHTML = formattedLocation;
+      weatherWidget[1].innerHTML = atmosphere.humidity;
+      weatherWidget[2].innerHTML = current.temp;
+      weatherWidget[3].src = dayAfterTmrwImageURL;
+      weatherWidget[4].src = tmrwImageURL;
+    }
+
+    // Call fetchWeather on initial page load
+    document.addEventListener("DOMContentLoaded", fetchWeather, false);
+
+    // Call fetchWeather when refresh button clicked
+    document
+      .getElementById("refreshButton")
+      .addEventListener("click", fetchWeather);
+  </script>
+</html>
