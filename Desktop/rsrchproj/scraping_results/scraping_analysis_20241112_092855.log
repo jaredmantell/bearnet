@@ -1,0 +1,6 @@
+2024-11-12 09:28:55,487 - INFO - Starting academic paper scraping analysis
+2024-11-12 09:28:55,488 - INFO - Running in TEST mode - processing every 5th link
+2024-11-12 09:28:55,488 - INFO - Analyzing top 50 domains per category
+2024-11-12 09:28:55,488 - INFO - Reading input file from: original_data.csv
+2024-11-12 09:28:55,489 - ERROR - Error in analyze_domains: [Errno 2] No such file or directory: 'original_data.csv'
+2024-11-12 09:28:55,489 - ERROR - Fatal error during analysis: [Errno 2] No such file or directory: 'original_data.csv'

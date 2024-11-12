@@ -1,0 +1,4 @@
+category,total_urls,successful_scrapes,doi_found,abstract_found,comment_urls_used,success_rate,doi_rate,abstract_rate,most_common_error,top_publisher
+repo,1,0,0,0,0,0.0,0.0,0.0,str,
+scientific,21,6,0,5,0,0.2857142857142857,0.0,0.8333333333333334,str,GenericHandler
+news,22,10,0,6,0,0.45454545454545453,0.0,0.6,str,GenericHandler
