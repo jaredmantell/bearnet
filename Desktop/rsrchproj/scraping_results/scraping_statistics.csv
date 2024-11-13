@@ -1,4 +1,4 @@
 category,total_urls,successful_scrapes,doi_found,abstract_found,comment_urls_used,success_rate,doi_rate,abstract_rate,most_common_error,top_publisher
 repo,1,0,0,0,0,0.0,0.0,0.0,str,
-scientific,21,6,0,5,0,0.2857142857142857,0.0,0.8333333333333334,str,GenericHandler
-news,22,10,0,6,0,0.45454545454545453,0.0,0.6,str,GenericHandler
+scientific,314,91,4,73,3,0.2898089171974522,0.04395604395604396,0.8021978021978022,str,GenericHandler
+news,352,172,2,104,5,0.48863636363636365,0.011627906976744186,0.6046511627906976,str,GenericHandler

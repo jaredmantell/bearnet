@@ -1,0 +1,6 @@
+2024-11-12 19:16:20,446 - INFO - Starting academic paper scraping analysis
+2024-11-12 19:16:20,446 - INFO - Running in TEST mode - processing every 1th link
+2024-11-12 19:16:20,446 - INFO - Analyzing top 30 domains per category
+2024-11-12 19:16:20,446 - INFO - Reading input file from: c:\Users\Jared\Desktop\rsrchproj\algorithmic-media\python_scraper\original_data.csv
+2024-11-12 19:16:20,510 - INFO - Processing 1 URLs for category: repo
+2024-11-12 19:16:21,645 - INFO - Processing 290 URLs for category: scientific

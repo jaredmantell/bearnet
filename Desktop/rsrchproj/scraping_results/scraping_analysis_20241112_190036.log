@@ -1,0 +1,10 @@
+2024-11-12 19:00:36,591 - INFO - Starting academic paper scraping analysis
+2024-11-12 19:00:36,599 - INFO - Running in TEST mode - processing every 3th link
+2024-11-12 19:00:36,599 - INFO - Analyzing top 80 domains per category
+2024-11-12 19:00:36,599 - INFO - Reading input file from: c:\Users\Jared\Desktop\rsrchproj\algorithmic-media\python_scraper\original_data.csv
+2024-11-12 19:00:36,647 - INFO - Processing 1 URLs for category: repo
+2024-11-12 19:00:37,802 - INFO - Processing 314 URLs for category: scientific
+2024-11-12 19:01:34,634 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-11-12 19:05:57,442 - INFO - Processing 347 URLs for category: news
+2024-11-12 19:07:09,106 - WARNING - Failed to process comment URL http://www.dagbladet.no/dinside/2007/09/07/511352.html,: 404 Client Error: Not Found for url: https://www.dagbladet.no/dinside/2007/09/07/511352.html,
+2024-11-12 19:10:08,323 - INFO - Analysis complete - check scraping_results directory for reports

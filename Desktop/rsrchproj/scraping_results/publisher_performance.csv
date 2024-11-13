@@ -1,3 +1,3 @@
 publisher,total_attempts,doi_success_rate,abstract_success_rate
-GenericHandler,14,0.0,0.6428571428571429
-NatureHandler,2,0.0,1.0
+GenericHandler,217,0.027649769585253458,0.6036866359447005
+NatureHandler,46,0.0,1.0

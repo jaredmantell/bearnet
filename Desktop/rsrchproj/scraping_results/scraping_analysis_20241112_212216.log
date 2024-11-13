@@ -1,0 +1,7 @@
+2024-11-12 21:22:16,966 - INFO - Starting academic paper scraping analysis
+2024-11-12 21:22:16,967 - INFO - Running in TEST mode - processing every 20th link
+2024-11-12 21:22:16,967 - INFO - Analyzing top 100 domains per category
+2024-11-12 21:22:16,967 - INFO - Reading input file from: c:\Users\Jared\Desktop\rsrchproj\algorithmic-media\python_scraper\original_data.csv
+2024-11-12 21:22:17,025 - INFO - Processing 1 URLs for category: repo
+2024-11-12 21:22:17,036 - ERROR - Error in analyze_domains: module 'signal' has no attribute 'SIGALRM'
+2024-11-12 21:22:17,036 - ERROR - Fatal error during analysis: module 'signal' has no attribute 'SIGALRM'
